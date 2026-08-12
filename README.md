@@ -90,7 +90,7 @@ With all four recurrent variants trained under comparable conditions, their resu
 Following the recurrent-model experiments, the project extended to a transformer-based approach using DistilBERT , a smaller, faster distillation of BERT that retains strong contextual language understanding at a fraction of the computational cost.
 The key distinction between the recurrent models and DistilBERT lies in how text is represented. Where the RNN and LSTM models depended on a Keras tokenizer to build a vocabulary and manually pad integer sequences, DistilBERT uses its own pretrained tokenizer, which already encodes the vocabulary and tokenization strategy the model was originally trained with , removing the need to build a vocabulary from scratch.
 
-![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distil%20archt.jpeg)
+![image alt](https://github.com/Fahadkhan2450/deep-learning-mental-health-classification/blob/223e4553a9e9d68b3df9afcf807c858ecbaae238/images/DISTU.jpeg)
 
 The pretrained model was loaded and fine-tuned on the project's seven target classes as follows:
 from transformers import DistilBertForSequenceClassification
