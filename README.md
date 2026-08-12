@@ -105,10 +105,7 @@ Dynamic padding was used during training, so each batch was padded only to the l
 Fine-tuning used a learning rate of 2e-5, a batch size of 16, weight decay for regularization, a linear learning-rate scheduler, mixed-precision training, and validation performed after every epoch.
 
 
-![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distill%20loss.jpeg)
-
-
-![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distl%20Acc.jpeg)
+![image alt](https://github.com/Fahadkhan2450/deep-learning-mental-health-classification/blob/526957010797218426733d55cd14e8fcdbd1195b/images/Dist%20p.jpeg)
 
 
 Evaluation and Results
