@@ -36,11 +36,15 @@ The initial architecture consisted of an embedding layer, a recurrent layer, dro
 
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/ce6842c25ea3ccfc14f4a2e6836a6ea049b6e433/images/RNN%20archt.jpeg)
 
+#Paramters Involved in RNN
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/f27c893201efc24264a9ef1ef8f30c055ecec123/images/RNN%20Training%20params.jpeg)
 
 This baseline model was able to fit the training data reasonably well,but validation accuracy fluctuated rather than improving consistently  an early indication that additional training alone would not resolve the model's limitations, and that both the architecture and training procedure needed refinement.
 
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/4eaa1a34a091e563ad92a90ee0673a4e6b489251/images/RNN%20ACC%20Graph.jpeg)
 
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/f27c893201efc24264a9ef1ef8f30c055ecec123/images/RNN%20Loss%20Graph.jpeg)
 
 
 # LSTM
