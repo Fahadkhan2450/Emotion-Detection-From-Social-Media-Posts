@@ -1,4 +1,4 @@
-# Emotion-Detection-From-Social-Media-Posts
+<img width="542" height="202" alt="image" src="https://github.com/user-attachments/assets/75bd4629-2f52-45b9-9c1a-24100acfb016" /># Emotion-Detection-From-Social-Media-Posts
 A Progressive Comparison of Recurrent and Transformer-Based Architectures for Multiclass Mental-Health Text Classification
 
 # ABSTRACT
@@ -36,7 +36,7 @@ The initial architecture consisted of an embedding layer, a recurrent layer, dro
 
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/ce6842c25ea3ccfc14f4a2e6836a6ea049b6e433/images/RNN%20archt.jpeg)
 
-#Paramters Involved in RNN
+# Paramters Involved in RNN
 
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/f27c893201efc24264a9ef1ef8f30c055ecec123/images/RNN%20Training%20params.jpeg)
 
@@ -46,13 +46,27 @@ This baseline model was able to fit the training data reasonably well,but valida
 
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/f27c893201efc24264a9ef1ef8f30c055ecec123/images/RNN%20Loss%20Graph.jpeg)
 
+# Class based RNN Scores
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/74e113298364fd1288bfcd60ee23d242fc314c91/images/RNN%20Class%20based%20scores.jpeg)
+
 
 # LSTM
-A conventional RNN, struggles to retain useful information across long stretches of text. LSTM addresses this through an internal memory cell and a system of gates that regulate which information is retained, updated, or discarded over time. The same dataset and evaluation procedure used for the RNN experiments were applied to the LSTM architecture to allow a direct, like-for-like comparison.
+A conventional RNN, struggles to retain useful information across long stretches of text. LSTM addresses this through an internal memory cell and a system of gates that regulate which information is retained, updated, or discarded over time. The same dataset and evaluation procedure used for the RNN experiments were applied to the LSTM architecture to allow a direct, like for like comparison.
 
-(image 4 ----------------------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/74e113298364fd1288bfcd60ee23d242fc314c91/images/LSTM%20Atcht.jpeg)
 
-(image 5-----------------------)
+# LSTM Params Involved 
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/74e113298364fd1288bfcd60ee23d242fc314c91/images/LSTM%20Params.jpeg)
+
+
+# LSTM Results 
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/74e113298364fd1288bfcd60ee23d242fc314c91/images/LSTM%20Conf%20Matrix.jpeg)
+
+# LSTM Classification Report
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e276efbd611adc967246977860bb8a2d984aa537/images/LST%20Class%20report.jpeg)
 
 
 # Bidirectional LSTM (BiLSTM)
