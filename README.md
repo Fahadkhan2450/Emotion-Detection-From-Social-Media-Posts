@@ -1,4 +1,4 @@
-# Emotion-Detection-From-Social-Media-Posts
+# Sentiment Analysis From Social Media Posts Using Deep Learning And Transformers
 A Progressive Comparison of Recurrent and Transformer-Based Architectures for Multiclass Mental-Health Text Classification
 
 # ABSTRACT
@@ -121,6 +121,29 @@ A full classification report was generated for each model to examine performance
 Finally, a multiclass ROC-AUC analysis was carried out using a One-vs-Rest strategy, in which each class is treated in turn as the positive class against all others. This produces an individual ROC curve per category and offers a more granular view of the model's ability to discriminate between classes than accuracy alone can provide.
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/748f53a2314ac4a690cf7ba63463df1b19ef97aa/images/Distill%20ROc%20Curve.jpeg)
 
+# Final Performance Table 
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/744d40ec032d21b0524e010f7969ebec22d3b4d1/images/FInal%20Table.jpeg)
+
+
+# Conclusion
+This project examined several complementary approaches to classifying social media posts into mental-health-related categories, deliberately favoring a progressive, staged methodology over a single-model solution in order to understand how each architectural and training decision affected performance.
+The Simple RNN served as an initial baseline before being extended into a Bidirectional RNN capable of drawing on context from both directions of a sentence. From there, systematic tuning of learning rate, dropout, recurrent units, and batch size — supported by Early Stopping, ReduceLROnPlateau, and Model Checkpointing — improved training stability and reduced overfitting.
+LSTM was then introduced for its capacity to retain relevant information across longer sequences, and Bidirectional LSTM combined this long-range memory with bidirectional context. The investigation concluded with DistilBERT, a pretrained transformer whose attention-based architecture stands in direct contrast to the recurrent models that preceded it — enabling a clear, structured comparison between traditional sequential deep learning and modern pretrained language models.
+Taken together, the training curves, loss curves, class-level metrics, confusion matrices, and ROC-AUC analysis presented above offer a detailed picture of how each architecture performs on this dataset.
+It should be emphasized that these models are intended strictly for text classification and research purposes. A model prediction is not, and should never be treated as, a medical or psychological diagnosis.
+
+# Future Work
+Several directions could extend this work further. Additional transformer architectures — including BERT, RoBERTa, ALBERT, and DeBERTa — could be evaluated under the same framework to test whether DistilBERT's efficiency comes at a meaningful cost to accuracy. Data augmentation, ensemble modeling, and explainable-AI techniques would also be natural next steps, as would validating the final model against an independent, held-out dataset to test generalization beyond the source corpus.
+A further valuable direction would be a qualitative error analysis: examining misclassified posts directly to identify the linguistic patterns that make particular classes difficult to distinguish. Such analysis could reveal specific weaknesses in the current models and guide more targeted improvements in future iterations of the system.
+
+
+# Refrences 
+1)  U. Gupta, A. Chatterjee, R. Srikanth, and P. Agrawal, “A Sentimentand-Semantics-Based Approach for Emotion Detection in Textual Conversations,” arXiv, 2017. [Online]. Available: http://arxiv.org/abs/1707.06996
+2)  Jingwen Liu, Weichang Gao, Meijun Ou, Bin Fu, Xuanbo Huang, Yisha Huan, "OnDeBERTa: An Ordered Neuron Memory Enhanced DeBERTa Model for E-commerce Review Sentiment Classification", 2026 International Conference on Computer Intelligence and Software Engineering (CICSE), pp.400-405, 2026.
+3)  L. O. Oyaniyi, G. F. A. Musa and N. P. Nguyen, "Context-Aware Sentiment Classification of Parenting Narratives on AI and Social Media Using Fine-Tuned Transformers," 2026 IEEE/ACIS 24th International Conference on Software Engineering Research, Management and Applications (SERA), Towson, MD, USA, 2026, pp. 179-184, doi: 10.1109/SERA69989.2026.11618647.
+4)  G. S. Prahasto and E. B. Setiawan, “Twitter Social Media-Based Sentiment Analysis Using Bi-LSTM Method With Genetic Algorithms Optimization”, khif, vol. 11, no. 1, pp. 20–26, Jul. 2025.
+5)  K. A, A. B and D. G, "Maximizing Sentiment Detection Through Comprehensive Multimodal Data Fusion: Integrating CNN, RNN, LSTM," 2025 International Conference on Multi-Agent Systems for Collaborative Intelligence (ICMSCI), Erode, India, 2025, pp. 1-7, doi: 10.1109/ICMSCI62561.2025.10894282.
 
 
 
