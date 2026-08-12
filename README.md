@@ -69,10 +69,18 @@ A conventional RNN, struggles to retain useful information across long stretches
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e276efbd611adc967246977860bb8a2d984aa537/images/LST%20Class%20report.jpeg)
 
 
-# Bidirectional LSTM (BiLSTM)
-Extending the LSTM in the same way the earlier RNN was extended, a Bidirectional LSTM was implemented to process text in both directions — but with each direction now handled by a full LSTM cell rather than a basic recurrent unit. Additional regularization, alongside further adjustments to learning rate and callback configuration, was applied at this stage based on validation performance observed during the earlier experiments.
+Bidirectional LSTM (BiLSTM)
 
-(Bilstm image ----------------)
+Extending the LSTM in the same way the earlier RNN was extended, a Bidirectional LSTM was implemented to process text in both directions — but with each direction now handled by a full LSTM cell rather than a basic recurrent unit. Additional regularization, alongside further adjustments to learning rate and callback configuration, was applied at this stage based on validation performance observed during the earlier experiments.
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/5874852a6957dd15781a0693a90b1a5633347ed1/images/BI%20LSTM%20Params.jpeg)
+
+The final BiLSTM model consisted of a total of [X] trainable parameters. On the held-out test set, the model achieved a test accuracy of 75%, with the corresponding training and validation accuracy curves shown below.
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/5874852a6957dd15781a0693a90b1a5633347ed1/images/Bi%20LSTM%20accuracy.jpeg)
+
+To further evaluate the model's ability to distinguish between the seven classes, a multiclass ROC-AUC analysis was performed using a One-vs-Rest approach, producing an individual ROC curve for each category.
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/5874852a6957dd15781a0693a90b1a5633347ed1/images/Bi%20lstm%20roc%20curve.jpeg)
 
 # Comparing the Recurrent Architectures
 With all four recurrent variants trained under comparable conditions, their results were assembled into a single comparison to evaluate whether each architectural change — bidirectionality, LSTM memory gating, or their combination — translated into a measurable improvement.
