@@ -1,4 +1,4 @@
-<img width="542" height="202" alt="image" src="https://github.com/user-attachments/assets/75bd4629-2f52-45b9-9c1a-24100acfb016" /># Emotion-Detection-From-Social-Media-Posts
+# Emotion-Detection-From-Social-Media-Posts
 A Progressive Comparison of Recurrent and Transformer-Based Architectures for Multiclass Mental-Health Text Classification
 
 # ABSTRACT
