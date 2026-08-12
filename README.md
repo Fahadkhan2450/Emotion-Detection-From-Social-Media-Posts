@@ -12,9 +12,6 @@ As more of everyday communication moves online, social media posts have become a
 Deep learning offers a more resilient alternative, since it learns patterns directly from data rather than relying on hand crafted rules. Recurrent Neural Networks (RNNs) were an early and natural fit for this kind of sequential data, processing text word by word while carrying forward information from what came before. Yet a basic RNN struggles to retain information across longer sequences , a limitation that becomes especially apparent as sentence length grows.
 To address this limitation methodically rather than by simply reaching for a larger model, the project follows a staged development path. A Simple RNN establishes the baseline.
 LSTM was then introduced for its ability to preserve relevant information over much longer spans of text through its internal gating mechanism, and a Bidirectional LSTM extended this by combining long-range memory with bidirectional context. Finally, the investigation shifts from purely recurrent architectures to a transformer based approach using DistilBERT, allowing a direct comparison between traditional sequential models and a modern pretrained language model.
-The overall development path followed in this project is summarized below.
-
-(IMAGE 1--------------)------------------
 
 
 # Dataset and Preprocessing
@@ -35,7 +32,7 @@ Simple RNN
 The initial architecture consisted of an embedding layer, a recurrent layer, dropout for regularization, dense layers, and a final softmax layer producing probabilities across the seven classes.
 
 
-(image 2 -------------------------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/ce6842c25ea3ccfc14f4a2e6836a6ea049b6e433/images/RNN%20archt.jpeg)
 
 
 This baseline model was able to fit the training data reasonably well,but validation accuracy fluctuated rather than improving consistently  an early indication that additional training alone would not resolve the model's limitations, and that both the architecture and training procedure needed refinement.
