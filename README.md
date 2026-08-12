@@ -69,7 +69,7 @@ A conventional RNN, struggles to retain useful information across long stretches
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e276efbd611adc967246977860bb8a2d984aa537/images/LST%20Class%20report.jpeg)
 
 
-Bidirectional LSTM (BiLSTM)
+# Bidirectional LSTM (BiLSTM)
 
 Extending the LSTM in the same way the earlier RNN was extended, a Bidirectional LSTM was implemented to process text in both directions — but with each direction now handled by a full LSTM cell rather than a basic recurrent unit. Additional regularization, alongside further adjustments to learning rate and callback configuration, was applied at this stage based on validation performance observed during the earlier experiments.
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/5874852a6957dd15781a0693a90b1a5633347ed1/images/BI%20LSTM%20Params.jpeg)
@@ -85,13 +85,13 @@ To further evaluate the model's ability to distinguish between the seven classes
 # Comparing the Recurrent Architectures
 With all four recurrent variants trained under comparable conditions, their results were assembled into a single comparison to evaluate whether each architectural change — bidirectionality, LSTM memory gating, or their combination — translated into a measurable improvement.
 
-(Table image ----------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/fd72a86572e04f7a176fb30a13709aa78b793089/images/Table%20For%20Acc%20and%20loss.jpeg)
 
-#DistilBERT
-Following the recurrent-model experiments, the project extended to a transformer-based approach using DistilBERT — a smaller, faster distillation of BERT that retains strong contextual language understanding at a fraction of the computational cost.
-The key distinction between the recurrent models and DistilBERT lies in how text is represented. Where the RNN and LSTM models depended on a Keras tokenizer to build a vocabulary and manually pad integer sequences, DistilBERT uses its own pretrained tokenizer, which already encodes the vocabulary and tokenization strategy the model was originally trained with — removing the need to build a vocabulary from scratch.
+# DistilBERT
+Following the recurrent-model experiments, the project extended to a transformer-based approach using DistilBERT , a smaller, faster distillation of BERT that retains strong contextual language understanding at a fraction of the computational cost.
+The key distinction between the recurrent models and DistilBERT lies in how text is represented. Where the RNN and LSTM models depended on a Keras tokenizer to build a vocabulary and manually pad integer sequences, DistilBERT uses its own pretrained tokenizer, which already encodes the vocabulary and tokenization strategy the model was originally trained with , removing the need to build a vocabulary from scratch.
 
-(Architect image -------------------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distil%20archt.jpeg)
 
 The pretrained model was loaded and fine-tuned on the project's seven target classes as follows:
 from transformers import DistilBertForSequenceClassification
@@ -101,15 +101,19 @@ model = DistilBertForSequenceClassification.from_pretrained(
     num_labels=len(class_names)
 )
 
+# Performance using Ditilbert Transformer
+
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distill%20Classification%20Report.jpeg)
+
 
 Dynamic padding was used during training, so each batch was padded only to the length of its longest sequence rather than to the global maximum — meaningfully reducing memory overhead compared with uniform padding across the full dataset.
 Fine-tuning used a learning rate of 2e-5, a batch size of 16, weight decay for regularization, a linear learning-rate scheduler, mixed-precision training, and validation performed after every epoch.
 
 
-(loss image ________---------------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distill%20loss.jpeg)
 
 
-(Acuracy image ------------)
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distl%20Acc.jpeg)
 
 
 # Evaluation and Results
