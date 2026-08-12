@@ -101,10 +101,6 @@ model = DistilBertForSequenceClassification.from_pretrained(
     num_labels=len(class_names)
 )
 
-# Performance using Ditilbert Transformer
-
-![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distill%20Classification%20Report.jpeg)
-
 
 Dynamic padding was used during training, so each batch was padded only to the length of its longest sequence rather than to the global maximum — meaningfully reducing memory overhead compared with uniform padding across the full dataset.
 Fine-tuning used a learning rate of 2e-5, a batch size of 16, weight decay for regularization, a linear learning-rate scheduler, mixed-precision training, and validation performed after every epoch.
@@ -116,13 +112,15 @@ Fine-tuning used a learning rate of 2e-5, a batch size of 16, weight decay for r
 ![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distl%20Acc.jpeg)
 
 
-# Evaluation and Results
+Evaluation and Results
 Because the task involves seven classes of varying difficulty, evaluation deliberately went beyond accuracy alone. Accuracy reports the overall proportion of correctly classified samples, but can obscure how a model performs on harder or less-represented categories. Precision measures how many of a class's predicted samples were correct, recall measures how many of a class's true samples were successfully identified, and F1-score balances the two — particularly valuable when both false positives and false negatives carry meaningful consequences, as they do in a mental-health-related classification task.
 A full classification report was generated for each model to examine performance at the level of individual classes.
 
-# Final DistilBERT Classification Report
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/e981317f1abc062abb077d9bb085feb80bb77d6e/images/Distill%20Classification%20Report.jpeg)
 
-(image ----------------------)
+Finally, a multiclass ROC-AUC analysis was carried out using a One-vs-Rest strategy, in which each class is treated in turn as the positive class against all others. This produces an individual ROC curve per category and offers a more granular view of the model's ability to discriminate between classes than accuracy alone can provide.
+![image alt](https://github.com/Fahadkhan2450/Emotion-Detection-From-Social-Media-Posts/blob/748f53a2314ac4a690cf7ba63463df1b19ef97aa/images/Distill%20ROc%20Curve.jpeg)
+
 
 
 
